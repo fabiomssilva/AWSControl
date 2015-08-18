@@ -1,0 +1,3 @@
+#!/bin/bash
+#Save the status of the AWS instance
+echo $(date) Backend Status: $(/opt/aws/statusBackend.py) >> /var/log/aws.log
