@@ -1,0 +1,25 @@
+#!/bin/bash
+#Check the hour and execute the weekend search 4 time a day
+#shall run every minute
+
+
+if [ $(date +%H%M) == "0600" ]
+then
+echo $(date) Starting   AMI > /var/log/aws.log
+/opt/aws/startBackend.py
+fi
+
+
+if [ $(date +%H%M) == "1600" ]
+then
+echo $(date) Starting   AMI > /var/log/aws.log
+/opt/aws/startBackend.py
+fi
+
+
+
+if [ $(date +%H%M) == "2130" ]
+then
+echo $(date) Starting wkendfly AMI > /var/log/aws.log
+/opt/aws/startBackend.py
+fi
